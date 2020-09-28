@@ -54,11 +54,11 @@ blogButtn.href = '#';
 blogButtn.style.color = 'green';
 addNav.appendChild(blogButtn);
 
-let homeButtn = document.createElement('a');
-homeButtn.textContent = 'Home';
-homeButtn.href = '#';
-homeButtn.style.color = 'green';
-addNav.prepend(homeButtn);
+// let homeButtn = document.createElement('a');
+// homeButtn.textContent = 'Home';
+// homeButtn.href = '#';
+// homeButtn.style.color = 'green';
+// addNav.prepend(homeButtn);
 
 //cta
 let domT = document.querySelectorAll('h1');
@@ -97,3 +97,17 @@ para[5].textContent = siteContent['contact']['address'];
 para[6].textContent = siteContent['contact']['phone'];
 para[7].textContent = siteContent['contact']['email'];
 para[8].textContent = siteContent['footer']['copyright'];
+
+//streach
+let updateBttn = document.createElement('button');
+updateBttn.textContent = 'Update Now';
+updateBttn.style.fontsize = '20px';
+updateBttn.style.width = '15%';
+updateBttn.style.color = 'green';
+updateBttn.style.backgroundColor = '#ffffff00'
+updateBttn.style.border = 'none'
+addNav.prepend(updateBttn);
+
+updateBttn.addEventListener('click', (event) => {
+    domT[0].innerHTML = '<h1>This content <br>has been<br>UPDATED<h1>';
+});
