@@ -43,7 +43,22 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 const links = document.querySelectorAll('a');
 links.forEach((value, i) => (value.textContent = Object.values(siteContent.nav)[i]));
-links.forEach((value) => (value.style.color = 'grey'));
+links.forEach((value) => (value.style.color = 'green'));
+
+//new items on nav
+let addNav = document.querySelector('nav');
+
+let blogButtn = document.createElement('a');
+blogButtn.textContent = 'Blog';
+blogButtn.href = '#';
+blogButtn.style.color = 'green';
+addNav.appendChild(blogButtn);
+
+let homeButtn = document.createElement('a');
+homeButtn.textContent = 'Home';
+homeButtn.href = '#';
+homeButtn.style.color = 'green';
+addNav.prepend(homeButtn);
 
 //cta
 let domT = document.querySelectorAll('h1');
